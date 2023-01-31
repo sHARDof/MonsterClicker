@@ -11,7 +11,7 @@ public class Music : MonoBehaviour
         Music_Back.volume = Music_Volume;
     }
 
-    public void SetVolume(float Volume_Slide)
+    public void Set_Volume(float Volume_Slide)
     {
         Music_Volume = Volume_Slide;
     }

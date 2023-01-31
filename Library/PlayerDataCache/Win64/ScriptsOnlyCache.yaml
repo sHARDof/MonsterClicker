@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Enemy
     - Levels
+    - Menu
     - MenuPause
     - Music
     - Player
@@ -58,14 +59,20 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: Exit_Game
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: Play_Game
+  - assembly: Assembly-CSharp
     fullTypeName: Music
-    methodName: SetVolume
+    methodName: Set_Volume
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Upgrade1
   - assembly: Assembly-CSharp
     fullTypeName: MenuPause
-    methodName: ClosePauseMenu
+    methodName: Close_Pause_Menu
   - assembly: Assembly-CSharp
     fullTypeName: Levels
     methodName: Click_Button_Next
@@ -77,7 +84,10 @@ ScriptsOnlyBuild:
     methodName: Upgrade2
   - assembly: Assembly-CSharp
     fullTypeName: MenuPause
-    methodName: OpenPauseMenu
+    methodName: Open_Pause_Menu
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: Open_Menu
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -109,29 +119,82 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2808}
     - Class: 114
-      Script: {instanceID: 3060}
+      Script: {instanceID: 3058}
     - Class: 114
-      Script: {instanceID: 3398}
+      Script: {instanceID: 3396}
     - Class: 114
-      Script: {instanceID: 4648}
+      Script: {instanceID: 3514}
     - Class: 114
-      Script: {instanceID: 5732}
+      Script: {instanceID: 4266}
     - Class: 114
-      Script: {instanceID: 6162}
+      Script: {instanceID: 4650}
     - Class: 114
-      Script: {instanceID: 6530}
+      Script: {instanceID: 5734}
     - Class: 114
-      Script: {instanceID: 7122}
+      Script: {instanceID: 6164}
     - Class: 114
-      Script: {instanceID: 8144}
+      Script: {instanceID: 6532}
     - Class: 114
-      Script: {instanceID: 9080}
+      Script: {instanceID: 7124}
     - Class: 114
-      Script: {instanceID: 37926}
+      Script: {instanceID: 7288}
     - Class: 114
-      Script: {instanceID: 57032}
+      Script: {instanceID: 8148}
     - Class: 114
-      Script: {instanceID: 64168}
+      Script: {instanceID: 9084}
+    - Class: 114
+      Script: {instanceID: 35224}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1606}
+    - Class: 114
+      Script: {instanceID: 2808}
+    - Class: 114
+      Script: {instanceID: 3058}
+    - Class: 114
+      Script: {instanceID: 3396}
+    - Class: 114
+      Script: {instanceID: 6164}
+    - Class: 114
+      Script: {instanceID: 6532}
+    - Class: 114
+      Script: {instanceID: 7124}
+    - Class: 114
+      Script: {instanceID: 35224}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -417,6 +480,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDownMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 326242cdf19924047f623583de160df3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuPause
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -511,6 +580,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shop
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -831,6 +906,12 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
+      Hash: 1fee242bde8c7558bc6c3821123927db
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Music
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1092,20 +1173,9 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Shop
-  - hash:
-      serializedVersion: 2
-      Hash: 1fee242bde8c7558bc6c3821123927db
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Music
-  - hash:
-      serializedVersion: 2
-      Hash: 326242cdf19924047f623583de160df3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuPause
+    className: Menu
   platform: 19
   scenePathNames:
+  - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
   playerPath: C:/Users/sHARD/Game/ExeFile/Game.exe
