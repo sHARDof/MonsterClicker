@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DDFBC18F-9396-3137-9CFE-DEB2CDB74636}</ProjectGuid>
+    <ProjectGuid>{C7D0F6E2-0D7C-6B0A-8B82-A708D3BFA33A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,9 +60,12 @@
     <Compile Include="Assets\Scripts\Shop.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Music.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Levels.cs" />
-    <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
+    <Compile Include="Assets\Scripts\MusicController.cs" />
+    <Compile Include="Assets\Scripts\SoundController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

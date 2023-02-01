@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private Text Text_Hp;
     [SerializeField] private SpriteRenderer Enemy_SR;
+    [SerializeField] private AudioSource Enemy_AS;
     [SerializeField] private Sprite[] MonsterArr_sprites = { Monster0, Monster1, Monster2, Monster3, Monster4, Monster5};
 
     private static Sprite Monster1, Monster2, Monster3, Monster4, Monster5, Monster0;
@@ -17,16 +18,20 @@ public class Enemy : MonoBehaviour
         if (HP[Levels.Level] - Player.Damage_Player > 0)
         {
             HP[Levels.Level] -= Player.Damage_Player;
+            Enemy_AS.Play();
         }
         else
         {
             HP[Levels.Level] = HP_Copy[Levels.Level];
             Player.Money += 1;
+            Enemy_AS.Play();
         }
     }
 
     private void Update()
     {
+        Enemy_AS.volume = SoundController.Sound_Volume;
+
         Enemy_SR.sprite = MonsterArr_sprites[Levels.Level];
         Text_Hp.text = HP[Levels.Level] + " HP";
 
