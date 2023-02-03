@@ -262,6 +262,17 @@
       "DebugActionIndex": 9
     },
     {
+      "Annotation": "CopyFiles ExeFile/Game_Data/sharedassets0.resource",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/PlayerDataCache/Win64/Data/sharedassets0.resource"
+      ],
+      "Outputs": [
+        "ExeFile/Game_Data/sharedassets0.resource"
+      ],
+      "DebugActionIndex": 10
+    },
+    {
       "Annotation": "CopyFiles ExeFile/Game_Data/sharedassets1.assets",
       "ActionType": "CopyFiles",
       "Inputs": [
@@ -270,7 +281,7 @@
       "Outputs": [
         "ExeFile/Game_Data/sharedassets1.assets"
       ],
-      "DebugActionIndex": 10
+      "DebugActionIndex": 11
     },
     {
       "Annotation": "CopyFiles ExeFile/Game_Data/sharedassets1.assets.resS",
@@ -280,17 +291,6 @@
       ],
       "Outputs": [
         "ExeFile/Game_Data/sharedassets1.assets.resS"
-      ],
-      "DebugActionIndex": 11
-    },
-    {
-      "Annotation": "CopyFiles ExeFile/Game_Data/sharedassets1.resource",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "Library/PlayerDataCache/Win64/Data/sharedassets1.resource"
-      ],
-      "Outputs": [
-        "ExeFile/Game_Data/sharedassets1.resource"
       ],
       "DebugActionIndex": 12
     },

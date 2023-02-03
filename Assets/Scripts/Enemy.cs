@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private Text Text_Hp;
-
+    [SerializeField] private ParticleSystem Enemy_Damge_PS;
     [SerializeField] private SpriteRenderer Enemy_SR;
     [SerializeField] private Sprite[] MonsterArr_sprites = { Monster0, Monster1, Monster2, Monster3, Monster4, Monster5 };
 
@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        Instantiate(Enemy_Damge_PS, transform.position, Quaternion.identity);
         Sound.ClickEnemy();
         Enemy_Damge();
     }

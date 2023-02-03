@@ -6,8 +6,11 @@ ScriptsOnlyBuild:
     - Menu
     - MenuPause
     - Music
+    - MusicController
     - Player
     - Shop
+    - Sound
+    - SoundController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -62,17 +65,41 @@ ScriptsOnlyBuild:
     fullTypeName: Menu
     methodName: Exit_Game
   - assembly: Assembly-CSharp
+    fullTypeName: MusicController
+    methodName: Set_Volume
+  - assembly: Assembly-CSharp
     fullTypeName: Menu
     methodName: Play_Game
   - assembly: Assembly-CSharp
-    fullTypeName: Music
+    fullTypeName: Menu
+    methodName: CloseSettings
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: OpenSettings
+  - assembly: Assembly-CSharp
+    fullTypeName: SoundController
+    methodName: Set_Volume
+  - assembly: Assembly-CSharp
+    fullTypeName: MusicController
     methodName: Set_Volume
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Upgrade1
   - assembly: Assembly-CSharp
+    fullTypeName: SoundController
+    methodName: Set_Volume
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Upgrade3
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Upgrade4
+  - assembly: Assembly-CSharp
     fullTypeName: MenuPause
     methodName: Close_Pause_Menu
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Upgrade5
   - assembly: Assembly-CSharp
     fullTypeName: Levels
     methodName: Click_Button_Next
@@ -117,33 +144,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1606}
     - Class: 114
-      Script: {instanceID: 2808}
+      Script: {instanceID: 2092}
     - Class: 114
-      Script: {instanceID: 3058}
+      Script: {instanceID: 2810}
     - Class: 114
-      Script: {instanceID: 3396}
+      Script: {instanceID: 3060}
     - Class: 114
-      Script: {instanceID: 3514}
+      Script: {instanceID: 3398}
     - Class: 114
-      Script: {instanceID: 4266}
+      Script: {instanceID: 3516}
     - Class: 114
-      Script: {instanceID: 4650}
+      Script: {instanceID: 4268}
     - Class: 114
-      Script: {instanceID: 5734}
+      Script: {instanceID: 4318}
     - Class: 114
-      Script: {instanceID: 6164}
+      Script: {instanceID: 4654}
     - Class: 114
-      Script: {instanceID: 6532}
+      Script: {instanceID: 5738}
     - Class: 114
-      Script: {instanceID: 7124}
+      Script: {instanceID: 6168}
     - Class: 114
-      Script: {instanceID: 7288}
+      Script: {instanceID: 6536}
     - Class: 114
-      Script: {instanceID: 8148}
+      Script: {instanceID: 7128}
     - Class: 114
-      Script: {instanceID: 9084}
+      Script: {instanceID: 7292}
     - Class: 114
-      Script: {instanceID: 35224}
+      Script: {instanceID: 7302}
+    - Class: 114
+      Script: {instanceID: 8154}
+    - Class: 114
+      Script: {instanceID: 8686}
+    - Class: 114
+      Script: {instanceID: 9092}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -151,6 +184,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -177,24 +214,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1606}
     - Class: 114
-      Script: {instanceID: 2808}
+      Script: {instanceID: 2092}
     - Class: 114
-      Script: {instanceID: 3058}
+      Script: {instanceID: 2810}
     - Class: 114
-      Script: {instanceID: 3396}
+      Script: {instanceID: 3060}
     - Class: 114
-      Script: {instanceID: 6164}
+      Script: {instanceID: 3398}
     - Class: 114
-      Script: {instanceID: 6532}
+      Script: {instanceID: 4318}
     - Class: 114
-      Script: {instanceID: 7124}
+      Script: {instanceID: 5738}
     - Class: 114
-      Script: {instanceID: 35224}
+      Script: {instanceID: 6168}
+    - Class: 114
+      Script: {instanceID: 6536}
+    - Class: 114
+      Script: {instanceID: 7128}
+    - Class: 114
+      Script: {instanceID: 7292}
+    - Class: 114
+      Script: {instanceID: 7302}
+    - Class: 114
+      Script: {instanceID: 8686}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -274,6 +325,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MusicController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -586,6 +643,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Shop
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundController
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -912,6 +975,12 @@ ScriptsOnlyBuild:
     className: Music
   - hash:
       serializedVersion: 2
+      Hash: 6d37053d20a5649d03df941425f3dc1f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1032,7 +1101,7 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: a6511b6391544c732260432bf9a0718c
+      Hash: dd30bf219c5bd618228f66928f570f7d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -1072,6 +1141,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 2f97fcc3d5dbdd23c62db35f079b62d0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Sound
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1168,14 +1243,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Menu
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/sHARD/Game/ExeFile/Game.exe
+  playerPath: C:/Users/sHARD/Documents/GitHub/MonsterClicker/MonsterClicker/ExeFile/Game.exe

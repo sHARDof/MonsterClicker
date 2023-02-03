@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    private int[] Costs = { 25, 100, 500, 1000, 1500, 2500 };
+    private int[] Costs = { 25, 100, 500, 1000, 1500};
 
     public void Upgrade1()
     {
@@ -61,19 +61,6 @@ public class Shop : MonoBehaviour
         if (Player.Money >= Costs[4])
         {
             Player.Money -= Costs[4];
-            Player.Damage_Player += 15;
-        }
-        else
-        {
-            return;
-        }
-    }
-
-    public void Upgrade6()
-    {
-        if (Player.Money >= Costs[5])
-        {
-            Player.Money -= Costs[5];
             Player.Damage_Player += 15;
         }
         else
