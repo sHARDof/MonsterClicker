@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        Awards.Clicks += 1;
         Instantiate(Enemy_Damge_PS, transform.position, Quaternion.identity);
         Sound.ClickEnemy();
         Enemy_Damge();

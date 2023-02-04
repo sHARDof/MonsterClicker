@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Awards
     - Enemy
     - Levels
     - Menu
@@ -33,6 +34,14 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.RandomBrush
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -89,6 +98,9 @@ ScriptsOnlyBuild:
     fullTypeName: SoundController
     methodName: Set_Volume
   - assembly: Assembly-CSharp
+    fullTypeName: Awards
+    methodName: Open_Panel_Awards
+  - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Upgrade3
   - assembly: Assembly-CSharp
@@ -115,6 +127,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Menu
     methodName: Open_Menu
+  - assembly: Assembly-CSharp
+    fullTypeName: Awards
+    methodName: Close_Panel_Awards
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -131,11 +146,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
       Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
@@ -146,37 +165,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2092}
     - Class: 114
-      Script: {instanceID: 2810}
+      Script: {instanceID: 2450}
     - Class: 114
-      Script: {instanceID: 3060}
+      Script: {instanceID: 2812}
     - Class: 114
-      Script: {instanceID: 3398}
+      Script: {instanceID: 3062}
     - Class: 114
-      Script: {instanceID: 3516}
+      Script: {instanceID: 3400}
     - Class: 114
-      Script: {instanceID: 4268}
+      Script: {instanceID: 3518}
     - Class: 114
-      Script: {instanceID: 4318}
+      Script: {instanceID: 4270}
     - Class: 114
-      Script: {instanceID: 4654}
+      Script: {instanceID: 4320}
     - Class: 114
-      Script: {instanceID: 5738}
+      Script: {instanceID: 4656}
     - Class: 114
-      Script: {instanceID: 6168}
+      Script: {instanceID: 5740}
     - Class: 114
-      Script: {instanceID: 6536}
+      Script: {instanceID: 6170}
     - Class: 114
-      Script: {instanceID: 7128}
+      Script: {instanceID: 6538}
     - Class: 114
-      Script: {instanceID: 7292}
+      Script: {instanceID: 7130}
     - Class: 114
-      Script: {instanceID: 7302}
+      Script: {instanceID: 7294}
     - Class: 114
-      Script: {instanceID: 8154}
+      Script: {instanceID: 7304}
     - Class: 114
-      Script: {instanceID: 8686}
+      Script: {instanceID: 8156}
     - Class: 114
-      Script: {instanceID: 9092}
+      Script: {instanceID: 8688}
+    - Class: 114
+      Script: {instanceID: 9094}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -225,27 +246,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2092}
     - Class: 114
-      Script: {instanceID: 2810}
+      Script: {instanceID: 2812}
     - Class: 114
-      Script: {instanceID: 3060}
+      Script: {instanceID: 3062}
     - Class: 114
-      Script: {instanceID: 3398}
+      Script: {instanceID: 3400}
     - Class: 114
-      Script: {instanceID: 4318}
+      Script: {instanceID: 4320}
     - Class: 114
-      Script: {instanceID: 5738}
+      Script: {instanceID: 5740}
     - Class: 114
-      Script: {instanceID: 6168}
+      Script: {instanceID: 6170}
     - Class: 114
-      Script: {instanceID: 6536}
+      Script: {instanceID: 6538}
     - Class: 114
-      Script: {instanceID: 7128}
+      Script: {instanceID: 7130}
     - Class: 114
-      Script: {instanceID: 7292}
+      Script: {instanceID: 7294}
     - Class: 114
-      Script: {instanceID: 7302}
+      Script: {instanceID: 7304}
     - Class: 114
-      Script: {instanceID: 8686}
+      Script: {instanceID: 8688}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -373,6 +394,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.PixelPerfect.dll
     namespaceName: UnityEngine.U2D
     className: CinemachinePixelPerfect
+  - hash:
+      serializedVersion: 2
+      Hash: 36781b7aeda870f5ae4d0af4cc6ef84e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Awards
   - hash:
       serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
@@ -969,7 +996,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
-      Hash: 1fee242bde8c7558bc6c3821123927db
+      Hash: 73a11122c81802b08abc22d940b1e984
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Music
@@ -1143,7 +1170,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 2f97fcc3d5dbdd23c62db35f079b62d0
+      Hash: d3f4a3850555ba2474a8091970a6030c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Sound
