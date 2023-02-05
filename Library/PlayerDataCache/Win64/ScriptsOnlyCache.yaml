@@ -396,7 +396,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: 36781b7aeda870f5ae4d0af4cc6ef84e
+      Hash: 52495bdf6f3c9e364631d527aec6d15f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Awards
