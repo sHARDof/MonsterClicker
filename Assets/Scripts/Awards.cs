@@ -37,7 +37,7 @@ public class Awards : MonoBehaviour
             sound.Achievement();
             Animator_Awards.SetTrigger("AnimActive");
             Click_Award1.SetActive(true);
-            Awards_Sprite.sprite = Clicks1;         
+            Awards_Sprite.sprite = Clicks1;
         }
         if (Clicks == 100)
         {
